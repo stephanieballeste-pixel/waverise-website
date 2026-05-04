@@ -182,63 +182,7 @@
             max-height: 100%;
             object-fit: contain;
         }
-
-        .product-info {
-            padding: 1.5rem;
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-        }
-
-< truncated lines 193-226 >
-            color: var(--white);
-            border: none;
-            border-radius: 8px;
-            font-weight: 700;
-            cursor: pointer;
-            text-decoration: none;
-            text-align: center;
-            transition: all 0.3s ease;
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            letter-spacing: 0.4px;
-            margin-top: auto;
-            box-shadow: 0 4px 12px rgba(217, 70, 239, 0.2);
-            display: block;
-        }
-
-        .view-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 16px rgba(217, 70, 239, 0.3);
-        }
-
-        .in-stock {
-            display: inline-block;
-            background: #10b981;
-            color: white;
-            padding: 0.4rem 0.8rem;
-            border-radius: 6px;
-            font-size: 0.75rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            margin-bottom: 0.8rem;
-        }
-
-        footer {
-            background: linear-gradient(135deg, #e8d5f2 0%, #f0e0f5 100%);
-            border-top: 2px solid var(--accent);
-            padding: 3rem 2rem;
-            text-align: center;
-            margin-top: 4rem;
-        }
-
-        footer p {
-            font-weight: 500;
-            color: var(--text-light);
-        }
-
-        footer p:first-child {
-            font-size: 1rem;
+< truncated lines 185-336 >
             margin-bottom: 0.5rem;
         }
 
@@ -273,6 +217,47 @@
     <section class="page-header">
         <h1>Product Inventory</h1>
         <p>Professional B2B distribution catalog — premium sourced products available for wholesale orders and partnerships</p>
+    </section>
+
+    <section class="brand-partners">
+        <div class="partners-container">
+            <h2>Brand Partners</h2>
+            <p>We distribute premium products from industry-leading brands</p>
+            <div class="partners-grid">
+                <div class="partner-item">
+                    <div class="partner-logo">AMT</div>
+                    <p>Model Kits & Collectibles</p>
+                </div>
+                <div class="partner-item">
+                    <div class="partner-logo">Carter's</div>
+                    <p>Children's Apparel</p>
+                </div>
+                <div class="partner-item">
+                    <div class="partner-logo">Crock-Pot</div>
+                    <p>Kitchen Appliances</p>
+                </div>
+                <div class="partner-item">
+                    <div class="partner-logo">Petco</div>
+                    <p>Pet Care Products</p>
+                </div>
+                <div class="partner-item">
+                    <div class="partner-logo">Pyramid America</div>
+                    <p>Home Décor & Posters</p>
+                </div>
+                <div class="partner-item">
+                    <div class="partner-logo">Play-Doh</div>
+                    <p>Toys & Games</p>
+                </div>
+                <div class="partner-item">
+                    <div class="partner-logo">Madden Girl</div>
+                    <p>Footwear & Fashion</p>
+                </div>
+                <div class="partner-item">
+                    <div class="partner-logo">Toastmaster</div>
+                    <p>Kitchen Electronics</p>
+                </div>
+            </div>
+        </div>
     </section>
 
     <section class="products">
@@ -370,7 +355,6 @@
                         <div class="in-stock">✓ In Stock</div>
                         <div class="product-category">${product.category}</div>
                         <div class="product-name">${product.name}</div>
-                        <div class="product-price">$${product.price.toFixed(2)}</div>
                         <span class="view-btn">Available for Order</span>
                     </div>
                 `;
