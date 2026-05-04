@@ -20,7 +20,7 @@ This site is deployed on Netlify and connected to `waverisellc.com`.
 
 ## 💜 About Wave Rise
 
-All-women, all-lesbian B2B distribution company specializing in Amazon FBA sourcing and brand partnerships.
+All-women, B2B distribution company specializing in Amazon FBA sourcing and brand partnerships.
 
 **Contact:** stephanieballeste@waverisellc.com
 **Store:** https://www.amazon.com/shops/Waverisellc
