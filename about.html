@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Wave Rise LLC</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --accent: #d946ef;
+            --accent-dark: #a01ba8;
+            --accent-light: #f3e6f9;
+            --text-dark: #1a0d1c;
+            --text-light: #5a3d62;
+            --white: #ffffff;
+            --border-light: #e8dff0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+            color: var(--text-dark);
+            background: linear-gradient(135deg, #faf7fc 0%, #f0e0f5 50%, #ffe6f7 100%);
+            line-height: 1.6;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: var(--white);
+            border-bottom: 2px solid var(--accent);
+            z-index: 1000;
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 12px rgba(217, 70, 239, 0.1);
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.4rem;
+            font-weight: 800;
+            color: var(--accent-dark);
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: var(--accent);
+            background: var(--accent-light);
+        }
+
+        .page-header {
+            margin-top: 60px;
+            padding: 4rem 2rem;
+            background: linear-gradient(135deg, #ffc0e0 0%, #e8d5f2 100%);
+            text-align: center;
+        }
+
+        .page-header h1 {
+            font-size: 2.8rem;
+            color: var(--text-dark);
+            margin-bottom: 1rem;
+            font-weight: 800;
+        }
+
+        .page-header p {
+            font-size: 1.05rem;
+            color: var(--text-light);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .content {
+            padding: 4rem 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .mission {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 12px;
+            border: 2px solid var(--border-light);
+            margin-bottom: 3rem;
+        }
+
+        .mission h2 {
+            color: var(--accent);
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .mission p {
+            color: var(--text-light);
+            line-height: 1.8;
+            font-size: 1rem;
+        }
+
+        .team {
+            margin-top: 4rem;
+        }
+
+        .team h2 {
+            font-size: 2rem;
+            color: var(--text-dark);
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .team-member {
+            background: var(--white);
+            border-radius: 12px;
+            border: 2px solid var(--border-light);
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .team-member:hover {
+            border-color: var(--accent);
+            box-shadow: 0 8px 24px rgba(217, 70, 239, 0.15);
+            transform: translateY(-6px);
+        }
+
+        .team-photo {
+            width: 100%;
+            height: 250px;
+            background: linear-gradient(135deg, #f9f5fd 0%, #fff0f8 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .team-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .team-info {
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .team-info h3 {
+            font-size: 1.3rem;
+            color: var(--text-dark);
+            margin-bottom: 0.5rem;
+        }
+
+        .team-info p {
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        .values {
+            margin-top: 4rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .value-card {
+            background: linear-gradient(135deg, #faf7fc 0%, #f0e0f5 100%);
+            padding: 2rem;
+            border-radius: 12px;
+            border: 2px solid var(--border-light);
+        }
+
+        .value-card h3 {
+            color: var(--accent);
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .value-card p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        footer {
+            background: linear-gradient(135deg, #e8d5f2 0%, #f0e0f5 100%);
+            border-top: 2px solid var(--accent);
+            padding: 3rem 2rem;
+            text-align: center;
+            margin-top: 4rem;
+        }
+
+        footer p {
+            font-weight: 500;
+            color: var(--text-light);
+        }
+
+        footer p:first-child {
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .page-header h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo">Wave Rise</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="page-header">
+        <h1>About Wave Rise LLC</h1>
+        <p>Building bridges between brands and markets through strategic B2B distribution</p>
+    </section>
+
+    <section class="content">
+        <div class="mission">
+            <h2>Our Mission</h2>
+            <p>Wave Rise LLC is a 100% women-owned and all-lesbian business dedicated to professional B2B eCommerce distribution. We specialize in Amazon FBA sourcing and brand partnerships, providing strategic logistics and market access for businesses looking to scale their distribution networks. Our commitment to excellence, authenticity, and partnership-focused growth drives everything we do.</p>
+        </div>
+
+        <div class="team">
+            <h2>Meet the Team</h2>
+            <div class="team-grid">
+                <div class="team-member">
+                    <div class="team-photo">
+                        <img src="https://i.imgur.com/kQiD3OZ.jpeg" alt="Stephanie Balleste">
+                    </div>
+                    <div class="team-info">
+                        <h3>Stephanie Balleste</h3>
+                        <p>Co-Founder & Operations Lead</p>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="team-photo">
+                        <img src="https://i.imgur.com/L30JRfL.png" alt="Alexandra Cooper">
+                    </div>
+                    <div class="team-info">
+                        <h3>Alexandra Cooper</h3>
+                        <p>Co-Founder & Business Development</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="values">
+            <div class="value-card">
+                <h3>Integrity</h3>
+                <p>We conduct business with complete transparency and honesty, building trust through consistent actions and ethical practices.</p>
+            </div>
+            <div class="value-card">
+                <h3>Excellence</h3>
+                <p>We maintain the highest standards in product selection, sourcing, and partnership management.</p>
+            </div>
+            <div class="value-card">
+                <h3>Partnership</h3>
+                <p>We believe in long-term relationships and mutual growth with every partner we work with.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Wave Rise LLC. Professional Distribution & Brand Partnerships.</p>
+        <p>Authorized Sourcing • Marketplace Compliance • Strategic Growth</p>
+    </footer>
+</body>
+</html>
